@@ -1,28 +1,36 @@
 import './App.css';
-import imagen from "../src/firma oscar .png"
+import img0 from "../src/images/cripto1.jpg";
+import img1 from "../src/images/cripto2.jpg";
+import img2 from "../src/images/cripto3.jpg";
+import "../src/coustomCss.css"
 
 function App() {
-  let nombre = "Oscar";
-  let caja = <div>Nombre:</div>; // para enviar un html desde js
-  let nombres = ["Jab", "Pepito", "Jose"];
-  let nombres_json = [{nombre: "Angélica",
-                      edad: 16,
-                      nombre: "Oscar",
-                      edad: 44}]
 
+  let names = ["Cripto 1", "Cripto 2", "Cripto 3"];
 
   return (
-    <div className="font">
-      <h1>Oscar Riojas</h1>
-      <h1>{ nombres[1] }</h1>
-      <h2>Edad = { nombres_json.edad }</h2>
-      <h3>Edad json = { nombres_json[0].nombre}</h3>
-      <input value={ nombre }></input>
-      <div>{ caja }</div>
-      <div>{ nombre }</div>
-      {alert("Hola mundo")}
-      <br></br>
-      <img src={ imagen }></img>
+    <div className='contenedor'>
+      <div className='caja'>
+        <img src={ img0 }></img>
+        <div className='name0'>
+          <p>{names[0]}</p>
+        </div>
+      </div>
+
+      <div className='caja'>
+        <img src={ img1 }></img>
+        <div className='name1'>
+          <p>{names[1]}</p>
+        </div>
+      </div>
+
+      <div className='caja'>
+        <img src={ img2 }></img>
+        <div className='name2'>
+          <p>{names[2]}</p>
+        </div>
+      </div>
+
     </div>
   );
 }
